@@ -61,7 +61,7 @@
 		// Add an initial values for the attribute.
 		menuToggle.add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', 'false' );
 
-		menuToggle.on( 'click.twentysixteen', function() {
+		menuToggle.on( 'click.jfc', function() {
 			$( this ).add( siteHeaderMenu ).toggleClass( 'toggled-on' );
 
 			// jscs:disable
@@ -79,12 +79,12 @@
 		// Toggle `focus` class to allow submenu access on tablets.
 		function toggleFocusClassTouchScreen() {
 			if ( window.innerWidth >= 910 ) {
-				$( document.body ).on( 'touchstart.twentysixteen', function( e ) {
+				$( document.body ).on( 'touchstart.jfc', function( e ) {
 					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
 						$( '.main-navigation li' ).removeClass( 'focus' );
 					}
 				} );
-				siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.twentysixteen', function( e ) {
+				siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.jfc', function( e ) {
 					var el = $( this ).parent( 'li' );
 
 					if ( ! el.hasClass( 'focus' ) ) {
@@ -94,16 +94,16 @@
 					}
 				} );
 			} else {
-				siteNavigation.find( '.menu-item-has-children > a' ).unbind( 'touchstart.twentysixteen' );
+				siteNavigation.find( '.menu-item-has-children > a' ).unbind( 'touchstart.jfc' );
 			}
 		}
 
 		if ( 'ontouchstart' in window ) {
-			$( window ).on( 'resize.twentysixteen', toggleFocusClassTouchScreen );
+			$( window ).on( 'resize.jfc', toggleFocusClassTouchScreen );
 			toggleFocusClassTouchScreen();
 		}
 
-		siteNavigation.find( 'a' ).on( 'focus.twentysixteen blur.twentysixteen', function() {
+		siteNavigation.find( 'a' ).on( 'focus.jfc blur.jfc', function() {
 			$( this ).parents( '.menu-item' ).toggleClass( 'focus' );
 		} );
 	} )();
@@ -161,7 +161,7 @@
 					newImg = new Image();
 					newImg.src = element.attr( 'src' );
 
-					$( newImg ).on( 'load.twentysixteen', function() {
+					$( newImg ).on( 'load.jfc', function() {
 						if ( newImg.width >= 840 ) {
 
 							// Check if an image in an image block has a width attribute; if its value is less than 840, return.
@@ -195,8 +195,8 @@
 		body = $( document.body );
 
 		$( window )
-			.on( 'load.twentysixteen', onResizeARIA )
-			.on( 'resize.twentysixteen', function() {
+			.on( 'load.jfc', onResizeARIA )
+			.on( 'resize.jfc', function() {
 				clearTimeout( resizeTimer );
 				resizeTimer = setTimeout( function() {
 					belowEntryMetaClass( 'img.size-full' );

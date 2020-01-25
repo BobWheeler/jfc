@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Sixteen functions and definitions
+ * JFC functions and definitions
  *
  * Set up the theme and provides some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
@@ -21,18 +21,18 @@
  * {@link https://developer.wordpress.org/plugins/}
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage JFC
+ * @since JFC 1.0
  */
 
 /**
- * Twenty Sixteen only works in WordPress 4.4 or later.
+ * JFC only works in WordPress 4.4 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-if ( ! function_exists( 'twentysixteen_setup' ) ) :
+if ( ! function_exists( 'jfc_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -40,18 +40,18 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 *
-	 * Create your own twentysixteen_setup() function to override in a child theme.
+	 * Create your own jfc_setup() function to override in a child theme.
 	 *
-	 * @since Twenty Sixteen 1.0
+	 * @since JFC 1.0
 	 */
-	function twentysixteen_setup() {
+	function jfc_setup() {
 		/*
 		 * Make theme available for translation.
-		 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/twentysixteen
-		 * If you're building a theme based on Twenty Sixteen, use a find and replace
-		 * to change 'twentysixteen' to the name of your theme in all the template files
+		 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/jfc
+		 * If you're building a theme based on JFC, use a find and replace
+		 * to change 'jfc' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'twentysixteen' );
+		load_theme_textdomain( 'jfc' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -67,7 +67,7 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 		/*
 		 * Enable support for custom logo.
 		 *
-		 *  @since Twenty Sixteen 1.2
+		 *  @since JFC 1.2
 		 */
 		add_theme_support(
 			'custom-logo',
@@ -89,8 +89,8 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Menu', 'twentysixteen' ),
-				'social'  => __( 'Social Links Menu', 'twentysixteen' ),
+				'primary' => __( 'Primary Menu', 'jfc' ),
+				'social'  => __( 'Social Links Menu', 'jfc' ),
 			)
 		);
 
@@ -135,7 +135,7 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 		 * This theme styles the visual editor to resemble the theme style,
 		 * specifically font, colors, icons, and column width.
 		 */
-		add_editor_style( array( 'css/editor-style.css', twentysixteen_fonts_url() ) );
+		add_editor_style( array( 'css/editor-style.css', jfc_fonts_url() ) );
 
 		// Load regular editor styles into the new block-based editor.
 		add_theme_support( 'editor-styles' );
@@ -151,62 +151,62 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Dark Gray', 'twentysixteen' ),
+					'name'  => __( 'Dark Gray', 'jfc' ),
 					'slug'  => 'dark-gray',
 					'color' => '#1a1a1a',
 				),
 				array(
-					'name'  => __( 'Medium Gray', 'twentysixteen' ),
+					'name'  => __( 'Medium Gray', 'jfc' ),
 					'slug'  => 'medium-gray',
 					'color' => '#686868',
 				),
 				array(
-					'name'  => __( 'Light Gray', 'twentysixteen' ),
+					'name'  => __( 'Light Gray', 'jfc' ),
 					'slug'  => 'light-gray',
 					'color' => '#e5e5e5',
 				),
 				array(
-					'name'  => __( 'White', 'twentysixteen' ),
+					'name'  => __( 'White', 'jfc' ),
 					'slug'  => 'white',
 					'color' => '#fff',
 				),
 				array(
-					'name'  => __( 'Blue Gray', 'twentysixteen' ),
+					'name'  => __( 'Blue Gray', 'jfc' ),
 					'slug'  => 'blue-gray',
 					'color' => '#4d545c',
 				),
 				array(
-					'name'  => __( 'Bright Blue', 'twentysixteen' ),
+					'name'  => __( 'Bright Blue', 'jfc' ),
 					'slug'  => 'bright-blue',
 					'color' => '#007acc',
 				),
 				array(
-					'name'  => __( 'Light Blue', 'twentysixteen' ),
+					'name'  => __( 'Light Blue', 'jfc' ),
 					'slug'  => 'light-blue',
 					'color' => '#9adffd',
 				),
 				array(
-					'name'  => __( 'Dark Brown', 'twentysixteen' ),
+					'name'  => __( 'Dark Brown', 'jfc' ),
 					'slug'  => 'dark-brown',
 					'color' => '#402b30',
 				),
 				array(
-					'name'  => __( 'Medium Brown', 'twentysixteen' ),
+					'name'  => __( 'Medium Brown', 'jfc' ),
 					'slug'  => 'medium-brown',
 					'color' => '#774e24',
 				),
 				array(
-					'name'  => __( 'Dark Red', 'twentysixteen' ),
+					'name'  => __( 'Dark Red', 'jfc' ),
 					'slug'  => 'dark-red',
 					'color' => '#640c1f',
 				),
 				array(
-					'name'  => __( 'Bright Red', 'twentysixteen' ),
+					'name'  => __( 'Bright Red', 'jfc' ),
 					'slug'  => 'bright-red',
 					'color' => '#ff675f',
 				),
 				array(
-					'name'  => __( 'Yellow', 'twentysixteen' ),
+					'name'  => __( 'Yellow', 'jfc' ),
 					'slug'  => 'yellow',
 					'color' => '#ffef8e',
 				),
@@ -216,8 +216,8 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 		// Indicate widget sidebars can use selective refresh in the Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
-endif; // twentysixteen_setup
-add_action( 'after_setup_theme', 'twentysixteen_setup' );
+endif; // jfc_setup
+add_action( 'after_setup_theme', 'jfc_setup' );
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
@@ -226,24 +226,24 @@ add_action( 'after_setup_theme', 'twentysixteen_setup' );
  *
  * @global int $content_width
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  */
-function twentysixteen_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'twentysixteen_content_width', 840 );
+function jfc_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'jfc_content_width', 840 );
 }
-add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
+add_action( 'after_setup_theme', 'jfc_content_width', 0 );
 
 /**
  * Add preconnect for Google Fonts.
  *
- * @since Twenty Sixteen 1.6
+ * @since JFC 1.6
  *
  * @param array  $urls           URLs to print for resource hints.
  * @param string $relation_type  The relation type the URLs are printed.
  * @return array $urls           URLs to print for resource hints.
  */
-function twentysixteen_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'twentysixteen-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+function jfc_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'jfc-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
@@ -252,21 +252,21 @@ function twentysixteen_resource_hints( $urls, $relation_type ) {
 
 	return $urls;
 }
-add_filter( 'wp_resource_hints', 'twentysixteen_resource_hints', 10, 2 );
+add_filter( 'wp_resource_hints', 'jfc_resource_hints', 10, 2 );
 
 /**
  * Registers a widget area.
  *
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  */
-function twentysixteen_widgets_init() {
+function jfc_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Sidebar', 'twentysixteen' ),
+			'name'          => __( 'Sidebar', 'jfc' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar.', 'jfc' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -276,9 +276,9 @@ function twentysixteen_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
+			'name'          => __( 'Content Bottom 1', 'jfc' ),
 			'id'            => 'sidebar-2',
-			'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+			'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'jfc' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -288,9 +288,9 @@ function twentysixteen_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
+			'name'          => __( 'Content Bottom 2', 'jfc' ),
 			'id'            => 'sidebar-3',
-			'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+			'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'jfc' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -298,19 +298,19 @@ function twentysixteen_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'twentysixteen_widgets_init' );
+add_action( 'widgets_init', 'jfc_widgets_init' );
 
-if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
+if ( ! function_exists( 'jfc_fonts_url' ) ) :
 	/**
-	 * Register Google fonts for Twenty Sixteen.
+	 * Register Google fonts for JFC.
 	 *
-	 * Create your own twentysixteen_fonts_url() function to override in a child theme.
+	 * Create your own jfc_fonts_url() function to override in a child theme.
 	 *
-	 * @since Twenty Sixteen 1.0
+	 * @since JFC 1.0
 	 *
 	 * @return string Google fonts URL for the theme.
 	 */
-	function twentysixteen_fonts_url() {
+	function jfc_fonts_url() {
 		$fonts_url = '';
 		$fonts     = array();
 		$subsets   = 'latin,latin-ext';
@@ -319,7 +319,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Merriweather, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
+		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'jfc' ) ) {
 			$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
 		}
 
@@ -327,7 +327,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Montserrat, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'twentysixteen' ) ) {
+		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'jfc' ) ) {
 			$fonts[] = 'Montserrat:400,700';
 		}
 
@@ -335,7 +335,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Inconsolata, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'twentysixteen' ) ) {
+		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'jfc' ) ) {
 			$fonts[] = 'Inconsolata:400';
 		}
 
@@ -359,92 +359,92 @@ endif;
  *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  */
-function twentysixteen_javascript_detection() {
+function jfc_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'twentysixteen_javascript_detection', 0 );
+add_action( 'wp_head', 'jfc_javascript_detection', 0 );
 
 /**
  * Enqueues scripts and styles.
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  */
-function twentysixteen_scripts() {
+function jfc_scripts() {
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'twentysixteen-fonts', twentysixteen_fonts_url(), array(), null );
+	wp_enqueue_style( 'jfc-fonts', jfc_fonts_url(), array(), null );
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri(), array(), '20190507' );
+	wp_enqueue_style( 'jfc-style', get_stylesheet_uri(), array(), '20190507' );
 
 	// Theme block stylesheet.
-	wp_enqueue_style( 'twentysixteen-block-style', get_template_directory_uri() . '/css/blocks.css', array( 'twentysixteen-style' ), '20190102' );
+	wp_enqueue_style( 'jfc-block-style', get_template_directory_uri() . '/css/blocks.css', array( 'jfc-style' ), '20190102' );
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'twentysixteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentysixteen-style' ), '20170530' );
-	wp_style_add_data( 'twentysixteen-ie', 'conditional', 'lt IE 10' );
+	wp_enqueue_style( 'jfc-ie', get_template_directory_uri() . '/css/ie.css', array( 'jfc-style' ), '20170530' );
+	wp_style_add_data( 'jfc-ie', 'conditional', 'lt IE 10' );
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'twentysixteen-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'twentysixteen-style' ), '20170530' );
-	wp_style_add_data( 'twentysixteen-ie8', 'conditional', 'lt IE 9' );
+	wp_enqueue_style( 'jfc-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'jfc-style' ), '20170530' );
+	wp_style_add_data( 'jfc-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the Internet Explorer 7 specific stylesheet.
-	wp_enqueue_style( 'twentysixteen-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'twentysixteen-style' ), '20170530' );
-	wp_style_add_data( 'twentysixteen-ie7', 'conditional', 'lt IE 8' );
+	wp_enqueue_style( 'jfc-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'jfc-style' ), '20170530' );
+	wp_style_add_data( 'jfc-ie7', 'conditional', 'lt IE 8' );
 
 	// Load the html5 shiv.
-	wp_enqueue_script( 'twentysixteen-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
-	wp_script_add_data( 'twentysixteen-html5', 'conditional', 'lt IE 9' );
+	wp_enqueue_script( 'jfc-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
+	wp_script_add_data( 'jfc-html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20170530', true );
+	wp_enqueue_script( 'jfc-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20170530', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'twentysixteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20170530' );
+		wp_enqueue_script( 'jfc-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20170530' );
 	}
 
-	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20181217', true );
+	wp_enqueue_script( 'jfc-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20181217', true );
 
 	wp_localize_script(
-		'twentysixteen-script',
+		'jfc-script',
 		'screenReaderText',
 		array(
-			'expand'   => __( 'expand child menu', 'twentysixteen' ),
-			'collapse' => __( 'collapse child menu', 'twentysixteen' ),
+			'expand'   => __( 'expand child menu', 'jfc' ),
+			'collapse' => __( 'collapse child menu', 'jfc' ),
 		)
 	);
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
+add_action( 'wp_enqueue_scripts', 'jfc_scripts' );
 
 /**
  * Enqueue styles for the block-based editor.
  *
- * @since Twenty Sixteen 1.6
+ * @since JFC 1.6
  */
-function twentysixteen_block_editor_styles() {
+function jfc_block_editor_styles() {
 	// Block styles.
-	wp_enqueue_style( 'twentysixteen-block-editor-style', get_template_directory_uri() . '/css/editor-blocks.css', array(), '20190102' );
+	wp_enqueue_style( 'jfc-block-editor-style', get_template_directory_uri() . '/css/editor-blocks.css', array(), '20190102' );
 	// Add custom fonts.
-	wp_enqueue_style( 'twentysixteen-fonts', twentysixteen_fonts_url(), array(), null );
+	wp_enqueue_style( 'jfc-fonts', jfc_fonts_url(), array(), null );
 }
-add_action( 'enqueue_block_editor_assets', 'twentysixteen_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'jfc_block_editor_styles' );
 
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  *
  * @param array $classes Classes for the body element.
  * @return array (Maybe) filtered body classes.
  */
-function twentysixteen_body_classes( $classes ) {
+function jfc_body_classes( $classes ) {
 	// Adds a class of custom-background-image to sites with a custom background image.
 	if ( get_background_image() ) {
 		$classes[] = 'custom-background-image';
@@ -467,18 +467,18 @@ function twentysixteen_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'twentysixteen_body_classes' );
+add_filter( 'body_class', 'jfc_body_classes' );
 
 /**
  * Converts a HEX value to RGB.
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  *
  * @param string $color The original color, in 3- or 6-digit hexadecimal form.
  * @return array Array containing RGB (red, green, and blue) values for the given
  *               HEX code, empty array otherwise.
  */
-function twentysixteen_hex2rgb( $color ) {
+function jfc_hex2rgb( $color ) {
 	$color = trim( $color, '#' );
 
 	if ( strlen( $color ) === 3 ) {
@@ -514,14 +514,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Add custom image sizes attribute to enhance responsive image functionality
  * for content images
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  *
  * @param string $sizes A source size value for use in a 'sizes' attribute.
  * @param array  $size  Image size. Accepts an array of width and height
  *                      values in pixels (in that order).
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
-function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
+function jfc_content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
 
 	if ( 840 <= $width ) {
@@ -542,20 +542,20 @@ function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
 
 	return $sizes;
 }
-add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr', 10, 2 );
+add_filter( 'wp_calculate_image_sizes', 'jfc_content_image_sizes_attr', 10, 2 );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  * for post thumbnails
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  *
  * @param array $attr Attributes for the image markup.
  * @param int   $attachment Image attachment ID.
  * @param array $size Registered image size or flat array of height and width dimensions.
  * @return array The filtered attributes for the image markup.
  */
-function twentysixteen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+function jfc_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
 		if ( is_active_sidebar( 'sidebar-1' ) ) {
 			$attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
@@ -565,18 +565,18 @@ function twentysixteen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	}
 	return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_post_thumbnail_sizes_attr', 10, 3 );
+add_filter( 'wp_get_attachment_image_attributes', 'jfc_post_thumbnail_sizes_attr', 10, 3 );
 
 /**
  * Modifies tag cloud widget arguments to display all tags in the same font size
  * and use list format for better accessibility.
  *
- * @since Twenty Sixteen 1.1
+ * @since JFC 1.1
  *
  * @param array $args Arguments for tag cloud widget.
  * @return array The filtered arguments for tag cloud widget.
  */
-function twentysixteen_widget_tag_cloud_args( $args ) {
+function jfc_widget_tag_cloud_args( $args ) {
 	$args['largest']  = 1;
 	$args['smallest'] = 1;
 	$args['unit']     = 'em';
@@ -584,4 +584,4 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 
 	return $args;
 }
-add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+add_filter( 'widget_tag_cloud_args', 'jfc_widget_tag_cloud_args' );

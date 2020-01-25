@@ -1,78 +1,78 @@
 <?php
 /**
- * Twenty Sixteen back compat functionality
+ * JFC back compat functionality
  *
- * Prevents Twenty Sixteen from running on WordPress versions prior to 4.4,
+ * Prevents JFC from running on WordPress versions prior to 4.4,
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 4.4.
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage JFC
+ * @since JFC 1.0
  */
 
 /**
- * Prevent switching to Twenty Sixteen on old versions of WordPress.
+ * Prevent switching to JFC on old versions of WordPress.
  *
  * Switches to the default theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  */
-function twentysixteen_switch_theme() {
+function jfc_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
 
 	unset( $_GET['activated'] );
 
-	add_action( 'admin_notices', 'twentysixteen_upgrade_notice' );
+	add_action( 'admin_notices', 'jfc_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'twentysixteen_switch_theme' );
+add_action( 'after_switch_theme', 'jfc_switch_theme' );
 
 /**
  * Adds a message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * Twenty Sixteen on WordPress versions prior to 4.4.
+ * JFC on WordPress versions prior to 4.4.
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  *
  * @global string $wp_version WordPress version.
  */
-function twentysixteen_upgrade_notice() {
+function jfc_upgrade_notice() {
 	/* translators: %s: The current WordPress version. */
-	$message = sprintf( __( 'Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'twentysixteen' ), $GLOBALS['wp_version'] );
+	$message = sprintf( __( 'JFC requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'jfc' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
 /**
  * Prevents the Customizer from being loaded on WordPress versions prior to 4.4.
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  *
  * @global string $wp_version WordPress version.
  */
-function twentysixteen_customize() {
+function jfc_customize() {
 	wp_die(
 		/* translators: %s: The current WordPress version. */
-		sprintf( __( 'Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'twentysixteen' ), $GLOBALS['wp_version'] ),
+		sprintf( __( 'JFC requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'jfc' ), $GLOBALS['wp_version'] ),
 		'',
 		array(
 			'back_link' => true,
 		)
 	);
 }
-add_action( 'load-customize.php', 'twentysixteen_customize' );
+add_action( 'load-customize.php', 'jfc_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 4.4.
  *
- * @since Twenty Sixteen 1.0
+ * @since JFC 1.0
  *
  * @global string $wp_version WordPress version.
  */
-function twentysixteen_preview() {
+function jfc_preview() {
 	if ( isset( $_GET['preview'] ) ) {
 		/* translators: %s: The current WordPress version. */
-		wp_die( sprintf( __( 'Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'twentysixteen' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( __( 'JFC requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'jfc' ), $GLOBALS['wp_version'] ) );
 	}
 }
-add_action( 'template_redirect', 'twentysixteen_preview' );
+add_action( 'template_redirect', 'jfc_preview' );
