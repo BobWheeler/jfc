@@ -1,0 +1,246 @@
+/* A New Leader paragraph settings */
+body {
+    font-size:16px;
+    box-sizing: border-box;
+    font-family: Poetsen One;
+    margin:0 !Important;
+    padding:0 !Important;
+}
+
+/******************************************************************
+ * Section 1 - Jo-Anna
+ ******************************************************************/
+#FrontPage-Jo-Anna > div > h1           { font-size: 18em; }
+#FrontPage-Rodriguez-Wheeler > div > h2 { font-size: 7em; }
+#FrontPage-For-Congress > div > h2      { font-size: 16.2em; }
+#FrontPage-NY-17 > div > h2             { font-size: 11.88em; }
+
+/******************************************************************
+ * Section 2 - A New Leader
+ ******************************************************************/
+#FrontPage-A-New-Leader > div > h1  { font-size: 19em; }
+#FrontPage-A-New-Leader-Text > div > div { font-size:2em; }
+#FrontPage-A-New-Leader-Text > div > div > br { margin-bottom: 32em; }
+#FrontPage-A-New-Leader-Text > div > div {
+    font-family:arial;
+    color:black !Important;
+}
+
+/* #FrontPage-A-New-Leader-Text > div > div > br { margin-bottom: 32em; } */
+
+/******************************************************************
+ * Section 3 - Fight For
+ ******************************************************************/
+#FrontPage-Fight-For > div > h2 { font-size:13em; }
+.FrontPage-Fight-For-Topic > div > div > h2 { font-size: 3em; }
+.FrontPage-Fight-For-Topic > div > div > ul  > li { font-size:2em; }
+
+/******************************************************************
+ * Section 3 - Fight For
+ ******************************************************************/
+
+/* font size for "What will Jo-Anna fight for" */
+/* #FrontPage-Fight-For > div > h2             */
+
+/* Fight for image */
+#FrontPage-Fight-For-Container > .elementor-background-overlay {
+    opacity: .3;
+}
+
+/* Fight for topics container */
+#FrontPage-Fight-For-Topics-Container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flex container for topics  */
+#FrontPage-Fight-For-Topics-Container > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Fight for topics */
+.FrontPage-Fight-For-Topic {
+    flex: 1 0 33%;
+}
+
+/* Fight for topic headlines */
+.FrontPage-Fight-For-Topic > div > div > h2 {
+    margin:0em;
+    font-family:arial;
+}
+
+/* Fight for topic texts */
+.FrontPage-Fight-For-Topic > div > div > ul  > li {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    font-family:arial;
+}
+
+/* Order of topics left to right, top to bottom */
+#FrontPage-Fight-For-Environment { order: 1; }
+#FrontPage-Fight-For-Education { order: 2; }
+#FrontPage-Fight-For-Economy { order: 3; }
+#FrontPage-Fight-For-Health-Care { order: 4; }
+#FrontPage-Fight-For-Housing { order: 5; }
+#FrontPage-Fight-For-Civil-Rights { order: 6; }
+
+/******************************************************************
+ * Section 4 - Make a Difference
+ ******************************************************************/
+
+#FrontPage-Make-A-Difference > div > h2 { font-size: 11em; }
+
+#FrontPage-Make-A-Difference-Section {
+    /* border: 5px solid yellow; */
+}
+
+/* "FrontPage-Make-A-Difference" heading */
+/* #FrontPage-Make-A-Difference > div > h2  */
+
+#FrontPage-Make-A-Difference-Inner-Section {
+    width:100%;
+    display: block;
+}
+
+#FrontPage-Make-A-Difference-Inner-Section-Picture {
+    width:50%;
+}
+
+#FrontPage-Make-A-Difference-Inner-Section-Picture-Image {
+    width:100%;
+    max-width:100%;
+}
+
+#FrontPage-Make-A-Difference-Inner-Section-Twitter {
+
+}
+
+#FrontPage-Make-A-Difference-Inner-Section-Twitter-Widget {
+
+}
+
+/******************************************************************
+ * Section 5 - Footer
+ ******************************************************************/
+
+#FooterMenu-Section-Container > div > div {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+ /*    align-items: stretch; */
+}
+
+#FooterMenu-Section-Container-Top-Divider { flex-basis:100%; }
+
+.elementor-social-icons-wrapper { font-size:16em; }
+.elementor-social-icons-wrapper {
+    font-size:0
+}
+
+.elementor-social-icon {
+    font-size: 40.88em;
+}
+
+.elementor-social-icon {
+    font-size: 1.56em;
+    padding: 0.5em;
+    margin-right: 0.31em;
+}
+
+.elementor-button {
+    line-height: 1;
+    font-size: 0.94em;
+    padding: 0.75em 1.5em;
+    -webkit-border-radius: 1.88em;
+    border-radius: 1.88em;
+}
+
+
+#FooterDonate > span
+#FooterMenu-Section-Container-Social  { flex-basis:7em; }
+#FooterMenu-Section-Container-Donate { flex-basis:5.6em; }
+#FooterMenu-Section-Container-Volunteer  { flex-basis:5.8em; }
+
+#FooterMenu-Section-Container-Email-Form { flex-basis:40%; }
+#FooterMenu-Section-Container-Sign-Up { background-color: #E69D9D; color:white; }
+#FooterMenu-Section-Container-Sign-Up .elementor-button-text { font-family: Poetsen One; }
+#FooterMenu-Section-Container-Bottom-Divider { flex-basis:100%; }
+#FooterMenu-Section-Container-Nav-Menu { flex-basis:100%; }
+#FooterMenu-Section-Container-Paid-For-By { flex-basis:100%; }
+
+/* --------------------------------------------------------------------------------------------
+ * ----- Do not modify anything above withour re-testing every device/browser combination -----
+ * ------------------------------------------------------------------------------------------ */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    body                                    { font-size: 2px; }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    body                                    { font-size: 4px; }
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
+}
+
+
+
+
+

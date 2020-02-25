@@ -384,6 +384,10 @@ function jfc_scripts() {
 	// Theme block stylesheet.
 	wp_enqueue_style( 'jfc-block-style', get_template_directory_uri() . '/css/blocks.css', array( 'jfc-style' ), '20190102' );
 
+    // Pick up JFC style sheet
+    wp_enqueue_style ('jfc-dev-style', get_template_directory_uri().'/css/dev-style.css', array('jfc-style'));
+    
+
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'jfc-ie', get_template_directory_uri() . '/css/ie.css', array( 'jfc-style' ), '20170530' );
 	wp_style_add_data( 'jfc-ie', 'conditional', 'lt IE 10' );
