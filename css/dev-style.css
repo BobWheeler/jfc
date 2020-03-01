@@ -10,15 +10,39 @@ body {
 /******************************************************************
  * Section 1 - Jo-Anna
  ******************************************************************/
-#FrontPage-Jo-Anna > div > h1           { font-size: 18em; }
-#FrontPage-Rodriguez-Wheeler > div > h2 { font-size: 7em; }
-#FrontPage-For-Congress > div > h2      { font-size: 16.2em; }
-#FrontPage-NY-17 > div > h2             { font-size: 11.88em; }
+
+#FrontPage-Left-Container > div > div {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 5px solid red; }
+
+#FrontPage-Jo-Anna > div > span           { font-size: 18em; }
+#FrontPage-Rodriguez-Wheeler > div > span { font-size: 7em; }
+#FrontPage-For-Congress > div > span      { font-size: 16.2em; }
+#FrontPage-NY-17 > div > span             { font-size: 11.88em; }
+
+#FrontPage-Volunteer > div , #FrontPage-Donate > div { width:8em }
+#FrontPage-Donate, #FrontPage-Volunteer { flex:1 0 50%; }
+
+
+#FrontPage-Email > div > form {
+    margin: 0 3em 0 3em;
+    border: 10px solid yellow;
+    /* width:80%; */
+}
+
+#FrontPage-Email-Submit {
+    background-color:#ff9d9d;
+    color:white;
+    font-famiy:Poetson One;
+    font-size:2em;
+}
 
 /******************************************************************
  * Section 2 - A New Leader
  ******************************************************************/
-#FrontPage-A-New-Leader > div > h1  { font-size: 19em; }
+#FrontPage-A-New-Leader > div > span  { font-size: 19em; }
 #FrontPage-A-New-Leader-Text > div > div { font-size:2em; }
 #FrontPage-A-New-Leader-Text > div > div > br { margin-bottom: 32em; }
 #FrontPage-A-New-Leader-Text > div > div {
@@ -31,8 +55,8 @@ body {
 /******************************************************************
  * Section 3 - Fight For
  ******************************************************************/
-#FrontPage-Fight-For > div > h2 { font-size:13em; }
-.FrontPage-Fight-For-Topic > div > div > h2 { font-size: 3em; }
+#FrontPage-Fight-For > div > span { font-size:13em; }
+.FrontPage-Fight-For-Topic > div > div > span { font-size: 3em; }
 .FrontPage-Fight-For-Topic > div > div > ul  > li { font-size:2em; }
 
 /******************************************************************
@@ -40,7 +64,7 @@ body {
  ******************************************************************/
 
 /* font size for "What will Jo-Anna fight for" */
-/* #FrontPage-Fight-For > div > h2             */
+/* #FrontPage-Fight-For > div > span             */
 
 /* Fight for image */
 #FrontPage-Fight-For-Container > .elementor-background-overlay {
@@ -68,7 +92,7 @@ body {
 }
 
 /* Fight for topic headlines */
-.FrontPage-Fight-For-Topic > div > div > h2 {
+.FrontPage-Fight-For-Topic > div > div > span {
     margin:0em;
     font-family:arial;
 }
@@ -93,14 +117,14 @@ body {
  * Section 4 - Make a Difference
  ******************************************************************/
 
-#FrontPage-Make-A-Difference > div > h2 { font-size: 11em; }
+#FrontPage-Make-A-Difference > div > span { font-size: 11em; }
 
 #FrontPage-Make-A-Difference-Section {
     /* border: 5px solid yellow; */
 }
 
 /* "FrontPage-Make-A-Difference" heading */
-/* #FrontPage-Make-A-Difference > div > h2  */
+/* #FrontPage-Make-A-Difference > div > span  */
 
 #FrontPage-Make-A-Difference-Inner-Section {
     width:100%;
@@ -135,38 +159,18 @@ body {
  /*    align-items: stretch; */
 }
 
-#FooterMenu-Section-Container-Top-Divider { flex-basis:100%; }
-
-.elementor-social-icons-wrapper { font-size:16em; }
-.elementor-social-icons-wrapper {
-    font-size:0
-}
-
-.elementor-social-icon {
-    font-size: 40.88em;
-}
-
-.elementor-social-icon {
-    font-size: 1.56em;
-    padding: 0.5em;
-    margin-right: 0.31em;
-}
-
-.elementor-button {
-    line-height: 1;
-    font-size: 0.94em;
-    padding: 0.75em 1.5em;
-    -webkit-border-radius: 1.88em;
-    border-radius: 1.88em;
-}
+#FooterMenu-Section-Container-Social  { width:7em; }
+#FooterMenu-Section-Container-Donate { width:2em; }
+#FooterMenu-Section-Container-Volunteer  { width:2em; }
+#FooterMenu-Section-Container-Email-Form  { width:10em; }
 
 
-#FooterDonate > span
-#FooterMenu-Section-Container-Social  { flex-basis:7em; }
-#FooterMenu-Section-Container-Donate { flex-basis:5.6em; }
-#FooterMenu-Section-Container-Volunteer  { flex-basis:5.8em; }
+#FooterMenu-Section-Container-Top-Divider { flex-basis::100%; }
+#FooterMenu-Section-Container-Social  { flex: 1 1 auto; }
+#FooterMenu-Section-Container-Donate { flex: 1 1 auto; }
+#FooterMenu-Section-Container-Volunteer  { flex: 1 1 auto; }
 
-#FooterMenu-Section-Container-Email-Form { flex-basis:40%; }
+#FooterMenu-Section-Container-Email-Form { flex: 1 2 auto }
 #FooterMenu-Section-Container-Sign-Up { background-color: #E69D9D; color:white; }
 #FooterMenu-Section-Container-Sign-Up .elementor-button-text { font-family: Poetsen One; }
 #FooterMenu-Section-Container-Bottom-Divider { flex-basis:100%; }
@@ -195,6 +199,7 @@ body {
     body                                    { font-size: 4px; }
 }
 
+font-size: 1px;
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
