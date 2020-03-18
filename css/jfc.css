@@ -1,0 +1,350 @@
+
+
+#post-2949 > header {
+    visibility: hidden;
+}
+
+.header-proportional-fonts {
+    font-size:10vw;
+    hyphens: none;
+}
+
+#Header { 
+    display:block;
+}
+
+
+#Header-Nav-Menu .elementor-nav-menu {
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#Header-Nav-Menu .menu-item {
+    flex:1 0 auto;
+    text-align : center;
+    border-bottom: 1px solid #fff;
+}
+
+#Header-Nav-Menu .menu-item:not(:last-child) {
+        flex:1 0 auto;
+    border-right: 1px solid #fff;
+    text-align : center;
+}
+
+#Header-Nav-Menu .elementor-item a {
+    color:#fff;
+}
+
+/*
+ *********************************************************
+ */
+
+body {
+    font-size:10vw;
+    hyphens: none;
+}
+
+#Header-Title  {
+    visibility: hidden;
+    height:0;
+    width:0;
+}
+
+#Page-Title  {
+    visibility: hidden;
+    height:0;
+    width:0;
+}
+
+#Top-Section { 
+    width:100%;
+}
+
+/*
+ *  ********* Intro ********* 
+ */
+
+#Column { 
+    width:100%;
+}
+
+#Inner-Section { 
+    display: flex;
+    width:100%;
+}
+
+#Left-Column > div > div {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    line-height: 0;
+}
+
+#Jo-Anna           { order:1; flex-grow: 0; }
+#Rodriguez-Wheeler { order:2; flex-grow: 0; }
+#For-Congress      { order:3; flex-grow: 0; }
+#Pink-Divider      { order:4; flex-grow: 0; }
+#Image             { order:5; flex-grow: 0; }
+#Spacer            { order:6; flex-grow: 1; }
+#Donate-Volunteer  { order:7; flex-grow: 0; }
+#Volunteer         { order:8; flex-grow: 0; }
+#Social            { order:9; flex-grow: 0; }
+
+.donate-volunteer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.donate, .volunteer {
+    hyphens: manual;
+    background-color: #FF9D9D;
+    color: white;
+    width:40%;
+    border-radius: 13px;
+    text-align: center;
+    font-weight: 900;
+    font-family: Poetsen One;
+    align-items: baseline;
+}
+
+/*
+ *  ********* A New Leadef ********* 
+ */
+
+.new-leader {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.new-leader p {
+    font-family: 'Roboto', sans-serif;
+    color:black;        
+    font-weight:500;
+}
+
+
+#New-Leader-Column {
+    opacity: .7;
+}
+
+/*
+ *  ********* What am I fighting for? ********* 
+ */
+
+.topic-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:black;
+}
+
+.topic {
+    box-sizing: border-box;
+    border: 1px solid red;
+    width:33%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.topic h1 { font-family: poetsen one; }
+
+
+#Environment { order:1; }
+#HealthCare  { order:2; }
+#Education   { order:3; }
+#Housing     { order:4; }
+#Economy     { order:5; }
+#Equality    { order:6; }
+#Immigration { order:7; }
+#Guns        { order:8; }
+
+
+/*
+ *  ********* Twitter ********* 
+ */
+.column-twitter {
+    overflow: scroll;
+}
+
+.twitter-timeline {
+    max-width: 100%;
+}
+
+.fa {
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.panel-title {
+    font-size: 25px; 
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.panel-heading {
+    background-color: #1da1f2 !important;;
+    color: #1da1f2 !important;;
+}
+/**/
+.elementor-61 .elementor-element.elementor-element-6ccfaa7 .elementor-heading-title { color:red; }
+/**/
+
+@media only screen and (max-width: 520px) {
+    
+    /**/    
+    .elementor-61 .elementor-element.elementor-element-6ccfaa7 .elementor-heading-title { color:green; }
+    /**/
+
+    .donate, .volunteer {
+        height:3em;
+        margin: 0 .6em 0 .6em;
+        line-height: 1em;
+        font-size: .4em;
+    }
+
+    #Image              { visibility: visible; }
+    #Image-Column       { visibility: hidden; height:0; }
+    #Left-Column        { width:100%;}
+    #Donate, #Volunteer { width:100%; }
+    #Spacer             { height:1em; }
+    .full-heading       { line-height: 1.1em; }
+    .new-leader p       { font-size: .3em;
+			              line-height:1.2;   
+			              margin-bottom: 1em; }
+    .topic-container    { font-size: 2vw; }
+    .topic              { width:100%; }
+
+    .topic              { padding: 0 5em 0 5em; }
+    .topic span           { font-size:4em; 
+	                      line-height: .9;
+	                      margin-bottom: 1em; }
+    .topic p            { font-size:2em; 
+	                      line-height: normal;
+	                      margin-bottom: 1em; }
+    .topic li           { font-size:2em;
+	                      line-height: normal; }
+    .panel { margin-top: 1px; max-height:500px; }
+    
+}
+
+
+@media only screen and (min-width:521px) and (max-width:1024px) {
+    /**/
+    .elementor-61 .elementor-element.elementor-element-6ccfaa7 .elementor-heading-title { color:yellow; }
+   /**/
+
+    .donate, .volunteer {
+        height:3em;
+        margin: 0 .3em 0 .3em;
+        line-height: 1em;
+        font-size: .2em;
+    }
+
+    #Image              { visibility: hidden; height:0; }
+    #Image-Column       { width:50%; }
+    #Left-Column        { width:50%; }
+    #Donate, #Volunteer { width:50%; }
+    #Volunteer > div > div > a > span > span { width:6em; }
+    .full-heading       { line-height: 1.1em; }
+    .new-leader p       { font-size: .3em;
+			              line-height:1.2;   
+			              margin-bottom: 1em; }
+    .topic-container    { font-size: 1vw; }
+    .topic              { width:50%; }
+    .topic span           { font-size:4em; 
+	                      line-height: .9;
+	                      margin-bottom: 1em; }
+    .topic p            { font-size:2em; 
+	                      line-height: normal;
+	                      margin-bottom: 1em; }
+    .topic li           { font-size:2em;
+	                      line-height: normal; }
+    .panel { margin-top: 1px; max-height:0px; }
+}
+
+@media screen and (min-width: 1025px) {
+    /**/  
+    .elementor-61 .elementor-element.elementor-element-6ccfaa7 .elementor-heading-title { color:orange }
+   /**/
+
+    .donate, .volunteer {
+        height:3em;
+        margin: 0 .3em 0 .3em;
+        line-height: 1em;
+        font-size: .2em;
+    }
+
+    #Image              { visibility: hidden; height:0; }
+    #Image-Column       { width:50%; }
+    #Left-Column        { width:50%; }
+    #Donate             { width:50%; }
+    #Volunteer          { width:50%; }
+    #Volunteer > div > div > a > span > span { width:8em; }
+    .full-heading       { line-height: 1.1em; }
+
+    #New-Leader-Title   { margin-top: .3em; }
+    #New-Leader-Title > div { line-height: .6em; }
+    #New-Leader-Title > div > span {
+        vertical-align: top; }
+    .new-leader p       { font-size: calc(min(.25em,28px));
+			              line-height:1.2em;   
+			              margin-bottom: 1em; }
+    .topic-container    { font-size: 1vw; }
+    .topic              { width:50%; }
+    .topic span           { font-size:4em; 
+	                      line-height: .9;
+	                      margin-bottom: 1em; }
+    .topic p            { font-size:2em; 
+	                      line-height: normal;
+	                      margin-bottom: 1em; }
+    .topic li           { font-size:2em;
+	                      line-height: normal;
+                        }
+    .panel { margin-top: 1px; max-height:0px; }
+}
+
+
+/*
+ *********************************************************
+ */
+
+#post-2823 > div > div {
+    font-size:18px;
+}
+
+.footer-proportional-fonts {
+    font-size:10vw;
+    hyphens: none;
+}
+
+#Footer { 
+    display:block;
+}
+
+
+#Footer-Nav-Menu .elementor-nav-menu {
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#Footer-Nav-Menu .menu-item {
+    flex:1 0 auto;
+    text-align : center;
+    border-bottom: 1px solid #fff;
+}
+
+#Footer-Nav-Menu .menu-item:not(:last-child) {
+    flex:1 0 auto;
+    border-right: 1px solid #fff;
+    text-align : center;
+}
+
+#Footer-Nav-Menu .elementor-item a {
+    color:#fff;
+}
