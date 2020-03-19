@@ -137,7 +137,6 @@ body {
     font-weight:500;
 }
 
-
 #New-Leader-Column {
     opacity: .7;
 }
@@ -263,15 +262,19 @@ body {
 			              line-height:1.2;   
 			              margin-bottom: 1em; }
     .topic-container    { font-size: 1vw; }
-    .topic              { width:50%; }
+    .topic              { width:50%; padding:2em 5em 2em 5em;}
     .topic span           { font-size:4em; 
 	                      line-height: .9;
-	                      margin-bottom: 55em; }
+	                      /* margin-bottom: 5em; */
+			  }
     .topic p            { font-size:2em; 
 	                      line-height: normal;
 	                      margin-bottom: 1em; }
+    .topic ul           { padding-right: 12em !Important; list-style-position: inside; }
     .topic li           { font-size:2em;
-	                      line-height: normal; }
+	                  line-height: normal;
+			  padding-right:2em;
+			}
     .panel { margin-top: 1px; max-height:0px; }
 }
 
