@@ -1,251 +1,360 @@
-/* A New Leader paragraph settings */
-body {
-    font-size:16px;
-    box-sizing: border-box;
-    font-family: Poetsen One;
-    margin:0 !Important;
-    padding:0 !Important;
+
+
+
+
+
+/*
+ * Page setting JFC Settings Page
+ *   Version: Mar 19 13:19
+ **   Version: Mar 19 13:47
+ *
+ */
+ 
+#post-2949 > header {
+    visibility: hidden;
 }
 
-/******************************************************************
- * Section 1 - Jo-Anna
- ******************************************************************/
-
-#FrontPage-Left-Container > div > div {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border: 5px solid red; }
-
-#FrontPage-Jo-Anna > div > span           { font-size: 18em; }
-#FrontPage-Rodriguez-Wheeler > div > span { font-size: 7em; }
-#FrontPage-For-Congress > div > span      { font-size: 16.2em; }
-#FrontPage-NY-17 > div > span             { font-size: 11.88em; }
-
-#FrontPage-Volunteer > div , #FrontPage-Donate > div { width:8em }
-#FrontPage-Donate, #FrontPage-Volunteer { flex:1 0 50%; }
-
-
-#FrontPage-Email > div > form {
-    margin: 0 3em 0 3em;
-    border: 10px solid yellow;
-    /* width:80%; */
+.header-proportional-fonts {
+    font-size:10vw;
+    hyphens: none;
 }
 
-#FrontPage-Email-Submit {
-    background-color:#ff9d9d;
-    color:white;
-    font-famiy:Poetson One;
-    font-size:2em;
+#Header { 
+    display:block;
 }
 
-/******************************************************************
- * Section 2 - A New Leader
- ******************************************************************/
-#FrontPage-A-New-Leader > div > span  { font-size: 19em; }
-#FrontPage-A-New-Leader-Text > div > div { font-size:2em; }
-#FrontPage-A-New-Leader-Text > div > div > br { margin-bottom: 32em; }
-#FrontPage-A-New-Leader-Text > div > div {
-    font-family:arial;
-    color:black !Important;
-}
 
-/* #FrontPage-A-New-Leader-Text > div > div > br { margin-bottom: 32em; } */
-
-/******************************************************************
- * Section 3 - Fight For
- ******************************************************************/
-#FrontPage-Fight-For > div > span { font-size:13em; }
-.FrontPage-Fight-For-Topic > div > div > span { font-size: 3em; }
-.FrontPage-Fight-For-Topic > div > div > ul  > li { font-size:2em; }
-
-/******************************************************************
- * Section 3 - Fight For
- ******************************************************************/
-
-/* font size for "What will Jo-Anna fight for" */
-/* #FrontPage-Fight-For > div > span             */
-
-/* Fight for image */
-#FrontPage-Fight-For-Container > .elementor-background-overlay {
-    opacity: .3;
-}
-
-/* Fight for topics container */
-#FrontPage-Fight-For-Topics-Container {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Flex container for topics  */
-#FrontPage-Fight-For-Topics-Container > div {
+#Header-Nav-Menu .elementor-nav-menu {
+    list-style:none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
-/* Fight for topics */
-.FrontPage-Fight-For-Topic {
-    flex: 1 0 33%;
+#Header-Nav-Menu .menu-item {
+    flex:1 0 auto;
+    text-align : center;
+    border-bottom: 1px solid #fff;
 }
 
-/* Fight for topic headlines */
-.FrontPage-Fight-For-Topic > div > div > span {
-    margin:0em;
-    font-family:arial;
+#Header-Nav-Menu .menu-item:not(:last-child) {
+        flex:1 0 auto;
+    border-right: 1px solid #fff;
+    text-align : center;
 }
 
-/* Fight for topic texts */
-.FrontPage-Fight-For-Topic > div > div > ul  > li {
-    list-style-type: none;
-    margin:0;
-    padding:0;
-    font-family:arial;
+#Header-Nav-Menu .elementor-item a {
+    color:#fff;
 }
 
-/* Order of topics left to right, top to bottom */
-#FrontPage-Fight-For-Environment { order: 1; }
-#FrontPage-Fight-For-Education { order: 2; }
-#FrontPage-Fight-For-Economy { order: 3; }
-#FrontPage-Fight-For-Health-Care { order: 4; }
-#FrontPage-Fight-For-Housing { order: 5; }
-#FrontPage-Fight-For-Civil-Rights { order: 6; }
+/*
+ *********************************************************
+ */
 
-/******************************************************************
- * Section 4 - Make a Difference
- ******************************************************************/
-
-#FrontPage-Make-A-Difference > div > span { font-size: 11em; }
-
-#FrontPage-Make-A-Difference-Section {
-    /* border: 5px solid yellow; */
+body {
+    font-size:10vw;
+    hyphens: none;
 }
 
-/* "FrontPage-Make-A-Difference" heading */
-/* #FrontPage-Make-A-Difference > div > span  */
+#Header-Title  {
+    visibility: hidden;
+    height:0;
+    width:0;
+}
 
-#FrontPage-Make-A-Difference-Inner-Section {
+#Page-Title  {
+    visibility: hidden;
+    height:0;
+    width:0;
+}
+
+#Top-Section { 
     width:100%;
-    display: block;
 }
 
-#FrontPage-Make-A-Difference-Inner-Section-Picture {
-    width:50%;
-}
+/*
+ *  ********* Intro ********* 
+ */
 
-#FrontPage-Make-A-Difference-Inner-Section-Picture-Image {
+#Column { 
     width:100%;
-    max-width:100%;
 }
 
-#FrontPage-Make-A-Difference-Inner-Section-Twitter {
-
+#Inner-Section { 
+    display: flex;
+    width:100%;
 }
 
-#FrontPage-Make-A-Difference-Inner-Section-Twitter-Widget {
-
-}
-
-/******************************************************************
- * Section 5 - Footer
- ******************************************************************/
-
-#FooterMenu-Section-Container > div > div {
+#Left-Column > div > div {
     display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    line-height: 0;
+}
+
+#Jo-Anna           { order:1; flex-grow: 0; }
+#Rodriguez-Wheeler { order:2; flex-grow: 0; }
+#For-Congress      { order:3; flex-grow: 0; }
+#Pink-Divider      { order:4; flex-grow: 0; }
+#Image             { order:5; flex-grow: 0; }
+#Spacer            { order:6; flex-grow: 1; }
+#Donate-Volunteer  { order:7; flex-grow: 0; }
+#Volunteer         { order:8; flex-grow: 0; }
+#Social            { order:9; flex-grow: 0; }
+
+.donate-volunteer {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
- /*    align-items: stretch; */
+    justify-content: center;
 }
 
-#FooterMenu-Section-Container-Social  { width:7em; }
-#FooterMenu-Section-Container-Donate { width:2em; }
-#FooterMenu-Section-Container-Volunteer  { width:2em; }
-#FooterMenu-Section-Container-Email-Form  { width:10em; }
-
-
-#FooterMenu-Section-Container-Top-Divider { flex-basis::100%; }
-#FooterMenu-Section-Container-Social  { flex: 1 1 auto; }
-#FooterMenu-Section-Container-Donate { flex: 1 1 auto; }
-#FooterMenu-Section-Container-Volunteer  { flex: 1 1 auto; }
-
-#FooterMenu-Section-Container-Email-Form { flex: 1 2 auto }
-#FooterMenu-Section-Container-Sign-Up { background-color: #E69D9D; color:white; }
-#FooterMenu-Section-Container-Sign-Up .elementor-button-text { font-family: Poetsen One; }
-#FooterMenu-Section-Container-Bottom-Divider { flex-basis:100%; }
-#FooterMenu-Section-Container-Nav-Menu { flex-basis:100%; }
-#FooterMenu-Section-Container-Paid-For-By { flex-basis:100%; }
-
-/* --------------------------------------------------------------------------------------------
- * ----- Do not modify anything above withour re-testing every device/browser combination -----
- * ------------------------------------------------------------------------------------------ */
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    body                                    { font-size: 2px; }
+.donate, .volunteer {
+    hyphens: manual;
+    background-color: #FF9D9D;
+    color: white;
+    width:40%;
+    border-radius: 13px;
+    text-align: center;
+    font-weight: 900;
+    font-family: Poetsen One;
+    align-items: baseline;
 }
 
-/* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    body                                    { font-size: 4px; }
+/*
+ *  ********* A New Leadef ********* 
+ */
+
+.new-leader {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-font-size: 1px;
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-    /* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-    /* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    /* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-    /* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-    /* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
-    /* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
-    /* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
-    /* Styles */
+.new-leader p {
+    font-family: 'Roboto', sans-serif;
+    color:black;        
+    font-weight:500;
 }
 
 
+#New-Leader-Column {
+    opacity: .7;
+}
+
+/*
+ *  ********* What am I fighting for? ********* 
+ */
+
+.topic-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:black;
+}
+
+.topic {
+    box-sizing: border-box;
+    border: 1px solid red;
+    width:33%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.topic h1 { font-family: poetsen one; }
 
 
+#Environment { order:1; }
+#HealthCare  { order:2; }
+#Education   { order:3; }
+#Housing     { order:4; }
+#Economy     { order:5; }
+#Equality    { order:6; }
+#Immigration { order:7; }
+#Guns        { order:8; }
 
+
+/*
+ *  ********* Twitter ********* 
+ */
+.column-twitter {
+    overflow: scroll;
+}
+
+.twitter-timeline {
+    max-width: 100%;
+}
+
+.fa {
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.panel-title {
+    font-size: 25px; 
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.panel-heading {
+    background-color: #1da1f2 !important;;
+    color: #1da1f2 !important;;
+}
+/**/
+.elementor-61 .elementor-element.elementor-element-6ccfaa7 .elementor-heading-title { color:red !Important; }
+/**/
+
+@media only screen and (max-width: 520px) {
+    
+    /**/    
+    .elementor-61 .elementor-element.elementor-element-6ccfaa7 .elementor-heading-title { color:green !Important; }
+    /**/
+
+    .donate, .volunteer {
+        height:3em;
+        margin: 0 .6em 0 .6em;
+        line-height: 1em;
+        font-size: .4em;
+    }
+
+    #Image              { visibility: visible; }
+    #Image-Column       { visibility: hidden; height:0; }
+    #Left-Column        { width:100%;}
+    #Donate, #Volunteer { width:100%; }
+    #Spacer             { height:1em; }
+    .full-heading       { line-height: 1.1em; }
+    .new-leader p       { font-size: .3em;
+			              line-height:1.2;   
+			              margin-bottom: 1em; }
+    .topic-container    { font-size: 2vw; }
+    .topic              { width:100%; }
+
+    .topic              { padding: 0 5em 0 5em; }
+    .topic span           { font-size:4em; 
+	                      line-height: .9;
+	                      margin-bottom: 1em; }
+    .topic p            { font-size:2em; 
+	                      line-height: normal;
+	                      margin-bottom: 1em; }
+    .topic li           { font-size:2em;
+	                      line-height: normal; }
+    .panel { margin-top: 1px; max-height:500px; }
+    
+}
+
+
+@media only screen and (min-width:521px) and (max-width:1024px) {
+    /**/
+    .elementor-61 .elementor-element.elementor-element-6ccfaa7 .elementor-heading-title { color:yellow !Important; }
+   /**/
+
+    .donate, .volunteer {
+        height:3em;
+        margin: 0 .3em 0 .3em;
+        line-height: 1em;
+        font-size: .2em;
+    }
+
+    #Image              { visibility: hidden; height:0; }
+    #Image-Column       { width:50%; }
+    #Left-Column        { width:50%; }
+    #Donate, #Volunteer { width:50%; }
+    #Volunteer > div > div > a > span > span { width:6em; }
+    .full-heading       { line-height: 1.1em; }
+    .new-leader p       { font-size: .3em;
+			              line-height:1.2;   
+			              margin-bottom: 1em; }
+    .topic-container    { font-size: 1vw; }
+    .topic              { width:50%; }
+    .topic span           { font-size:4em; 
+	                      line-height: .9;
+	                      margin-bottom: 55em; }
+    .topic p            { font-size:2em; 
+	                      line-height: normal;
+	                      margin-bottom: 1em; }
+    .topic li           { font-size:2em;
+	                      line-height: normal; }
+    .panel { margin-top: 1px; max-height:0px; }
+}
+
+@media screen and (min-width: 1025px) {
+    /**/  
+    .elementor-61 .elementor-element.elementor-element-6ccfaa7 .elementor-heading-title { color:orange !Important; }
+   /**/
+
+    .donate, .volunteer {
+        height:3em;
+        margin: 0 .3em 0 .3em;
+        line-height: 1em;
+        font-size: .2em;
+    }
+
+    #Image              { visibility: hidden; height:0; }
+    #Image-Column       { width:50%; }
+    #Left-Column        { width:50%; }
+    #Donate             { width:50%; }
+    #Volunteer          { width:50%; }
+    #Volunteer > div > div > a > span > span { width:8em; }
+    .full-heading       { line-height: 1.1em; }
+
+    #New-Leader-Title   { margin-top: .3em; }
+    #New-Leader-Title > div { line-height: .6em; }
+    #New-Leader-Title > div > span {
+        vertical-align: top; }
+    .new-leader p       { font-size: calc(min(.25em,28px));
+			              line-height:1.2em;   
+			              margin-bottom: 1em; }
+    .topic-container    { font-size: 1vw; }
+    .topic              { width:50%; }
+    .topic span           { font-size:4em; 
+	                      line-height: .9;
+	                      margin-bottom: 1em; }
+    .topic p            { font-size:2em; 
+	                      line-height: normal;
+	                      margin-bottom: 1em; }
+    .topic li           { font-size:2em;
+	                      line-height: normal;
+                        }
+    .panel { margin-top: 1px; max-height:0px; }
+}
+
+
+/*
+ *********************************************************
+ */
+
+#post-2823 > div > div {
+    font-size:18px;
+}
+
+.footer-proportional-fonts {
+    font-size:10vw;
+    hyphens: none;
+}
+
+#Footer { 
+    display:block;
+}
+
+
+#Footer-Nav-Menu .elementor-nav-menu {
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#Footer-Nav-Menu .menu-item {
+    flex:1 0 auto;
+    text-align : center;
+    border-bottom: 1px solid #fff;
+}
+
+#Footer-Nav-Menu .menu-item:not(:last-child) {
+    flex:1 0 auto;
+    border-right: 1px solid #fff;
+    text-align : center;
+}
+
+#Footer-Nav-Menu .elementor-item a {
+    color:#fff;
+}
